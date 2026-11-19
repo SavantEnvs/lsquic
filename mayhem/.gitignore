@@ -1,0 +1,3 @@
+# build directories written by mayhem/build.sh (removed by `git clean -ffdX`)
+build-*/
+out/

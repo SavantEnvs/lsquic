@@ -1,0 +1,9 @@
+project: savantenvs/lsquic
+target: server-initial
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/server-initial/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_server_initial
+    libfuzzer: true
+    timeout: 10

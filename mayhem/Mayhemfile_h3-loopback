@@ -1,0 +1,9 @@
+project: savantenvs/lsquic
+target: h3-loopback
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/h3-loopback/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_h3_loopback
+    libfuzzer: true
+    timeout: 30

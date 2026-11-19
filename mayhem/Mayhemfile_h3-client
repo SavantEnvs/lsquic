@@ -1,0 +1,9 @@
+project: savantenvs/lsquic
+target: h3-client
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/h3-client/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_h3_client
+    libfuzzer: true
+    timeout: 30

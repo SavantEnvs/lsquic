@@ -1,0 +1,9 @@
+project: savantenvs/lsquic
+target: qpack-decoder
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/qpack-decoder/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_qpack_decoder
+    libfuzzer: true
+    timeout: 10

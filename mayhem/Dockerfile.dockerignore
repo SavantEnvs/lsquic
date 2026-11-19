@@ -1,0 +1,3 @@
+# Keep .git (the grader uses history); drop local build output only.
+mayhem/build-*/
+mayhem/out/
